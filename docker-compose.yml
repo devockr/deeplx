@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+    container_name: deepl
+    image: zu1k/deepl
+    ports:
+      - "${PORT}:80"
