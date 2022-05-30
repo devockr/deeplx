@@ -5,6 +5,8 @@ services:
     build:
       context: .
     container_name: deepl
-    image: zu1k/deepl
+    image: devockr/deepl
+    environment:
+      PORT: "${PORT:-8080}"
     ports:
-      - "${PORT}:80"
+      - "${PORT:-8080}:${PORT:-8080}"
