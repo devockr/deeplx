@@ -1,11 +1,7 @@
-FROM zu1k/deepl
+FROM zu1k/deepl:latest
 
-COPY ./start.sh /start.sh
+COPY ./start.sh start.sh
 
-RUN apk update && apk add curl nginx
+EXPOSE ${PORT:-8080}
 
-ENV PORT=8080
-
-EXPOSE $PORT
-
-ENTRYPOINT ["sh", "/start.sh"]
+ENTRYPOINT [ "sh", "start.sh" ]

@@ -7,6 +7,6 @@ services:
     container_name: deepl
     image: devockr/deepl
     environment:
-      PORT: "${PORT:-8080}"
+      PORT: ${PORT:-8000}
     ports:
-      - "${PORT:-8080}:${PORT:-8080}"
+      - ${PORT:-8000}:${PORT:-8000}
