@@ -4,8 +4,8 @@ services:
   web:
     build:
       context: .
-    container_name: deepl
-    image: devockr/deepl
+    container_name: deeplx
+    image: deeplx
     environment:
       PORT: ${PORT:-8000}
     ports:
